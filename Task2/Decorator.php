@@ -9,7 +9,7 @@ class TextBlock extends Block
 {
     public function render()
     {
-        require_once("views/Text.html");
+        require_once("../task1/views/Text.html");
     }
 }
 
@@ -32,12 +32,15 @@ class CommentDecorator extends CBlock
     public function render()
     {
         echo <<<HERE
-        <!-- Block BEGIN. Type: <?= get_class($block) ?>, ID: <?= spl_object_hash($block) ?>, Length: <?= $block->getLength() ?> -->
+         Block BEGIN. Type:
 HERE;
         parent::render();
         echo <<<HERE
-        <!-- Block END. Type: <?= get_class($block) ?>, ID: <?= spl_object_hash($block) ?> -->
+         Block END. Type:
 HERE;
 
     }
 }
+
+$text = new CommentDecorator(new TextBlock);
+$text -> render();
