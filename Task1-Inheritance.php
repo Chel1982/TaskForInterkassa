@@ -26,5 +26,6 @@ class ButtonBlock implements Block
         require_once ("views/Button.html");
     }
 }
+
 $Text = new ImageBlock();
 $Text -> render();
