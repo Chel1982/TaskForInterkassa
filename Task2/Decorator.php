@@ -46,6 +46,3 @@ HERE;
 
     }
 }
-
-$text = new CommentDecorator(new TextBlock);
-$text -> render();
