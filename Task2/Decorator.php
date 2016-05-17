@@ -9,7 +9,7 @@ class TextBlock extends Block
 {
     public function render()
     {
-        require_once("../task1/views/Text.html");
+        require_once("views/Text.html");
     }
 }
 
