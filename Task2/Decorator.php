@@ -18,7 +18,7 @@ class TextBlock extends Block
     }
 }
 
-abstract class CBlock extends Block
+abstract class BlockDecorator extends Block
 {
     private $text;
 
@@ -32,7 +32,7 @@ abstract class CBlock extends Block
     }
 }
 
-class CommentDecorator extends CBlock
+class CommentDecorator extends BlockDecorator
 {
     public function render()
     {
