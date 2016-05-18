@@ -29,8 +29,35 @@ class ButtonBlock extends Block
 
 abstract class BlockComposite extends Block
 {
-    public function addBlock(Block $block)
-    {
 
+}
+
+class BlComposite extends BlockComposite
+{
+    protected $obj = array();
+
+    public function render()
+    {
+        return $this;
+    }
+
+    public function addObj(Block $block)
+    {
+        array_push ($this -> obj , $block);
+    }
+
+    public function renderComposition()
+
+    {
+        foreach($this -> obj as $item){
+            echo $item->render();
+
+        }
     }
 }
+
+$block = new BlComposite();
+$block -> addObj(new TextBlock);
+$block -> addObj(new ButtonBlock);
+$block -> addObj(new ImageBlock);
+$block ->renderComposition();
