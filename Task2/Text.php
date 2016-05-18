@@ -7,8 +7,12 @@
 </head>
 <body>
    <?php
-        $text = new CommentDecorator(new TextBlock);
-        $text -> render();
+
+   $border = "2px";
+   $border_color = "green";
+   $style = new BorderDecorator(new TextBlock,$border,$border_color);
+   $style  -> render();
+
    ?>
 </body>
 </html>
