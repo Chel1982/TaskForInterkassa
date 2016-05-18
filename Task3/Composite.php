@@ -26,3 +26,11 @@ class ButtonBlock extends Block
         require_once("views/Button.html");
     }
 }
+
+abstract class BlockComposite extends Block
+{
+    public function addBlock(Block $block)
+    {
+
+    }
+}
