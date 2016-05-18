@@ -39,12 +39,12 @@ class CommentDecorator extends BlockDecorator
 
     private function  commentDecoratorBegin()
     {
-        echo "&lt  !-- Block BEGIN. Type:-->";
+        echo "&lt!-- Block BEGIN. Type:".__CLASS__." -->";
     }
 
     private function commentDecoratorEnd()
     {
-        echo "Прощай, мир!!!";
+        echo "&lt!-- Block END. Type:".__CLASS__."-->";
     }
 }
 
