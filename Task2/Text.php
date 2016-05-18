@@ -8,10 +8,12 @@
 <body>
    <?php
 
-   $border = "2px";
+   $comm = new CommentDecorator(new TextBlock);
+   $comm -> render();
+   /*$border = "2px";
    $border_color = "green";
    $style = new BorderDecorator(new TextBlock,$border,$border_color);
-   $style  -> render();
+   $style  -> render();*/
 
    ?>
 </body>

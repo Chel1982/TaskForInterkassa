@@ -29,16 +29,22 @@ abstract class BlockDecorator extends Block
 
 class CommentDecorator extends BlockDecorator
 {
+
     public function render()
     {
-        echo <<<HERE
-        <\!-- Block BEGIN. Type:<?= get_class() ?>
-HERE;
+        $this->commentDecoratorBegin();
         parent::render();
-        echo <<<HERE
-        Block END. Type:
-HERE;
+        $this->commentDecoratorEnd();
+    }
 
+    private function  commentDecoratorBegin()
+    {
+        echo "&lt  !-- Block BEGIN. Type:-->";
+    }
+
+    private function commentDecoratorEnd()
+    {
+        echo "Прощай, мир!!!";
     }
 }
 
@@ -59,17 +65,12 @@ class BorderDecorator extends BlockDecorator
         parent::render();
         $this->borderDecoratorEnd();
     }
-    public function borderDecoratorBegin()
+    private function borderDecoratorBegin()
     {
         echo "<div style='border: ".$this->border." solid ".$this->border_color."'>";
-       /* echo "<style type='text/css'>
-                            .brd {
-                                    border: ".$this->border." solid ".$this->border_color.";
-                                 }
-             </style>";*/
 
     }
-    public function borderDecoratorEnd()
+    private function borderDecoratorEnd()
     {
         echo "</div>";
     }
