@@ -105,7 +105,7 @@ class MyIterator implements Iterator
 $block = new CreateBlock();
 $block -> addObj(new TextBlock);
 $block -> addObj(new ImageBlock);
-var_dump($block);
+
 
 $it = new MyIterator($block);
 
