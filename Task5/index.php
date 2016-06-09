@@ -15,9 +15,10 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $up = $_POST['up'];
         $com = $_POST['comm'];
+    }
         $obj = new StrategyComment($up);
         $obj->ComentBlock($com);
-    }
+
      ?>
     <div>
         <h2>
@@ -34,12 +35,13 @@
         <input type="submit" name="down" value="Включить комментарий внизу блока" />
     </form>
     <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $up = $_POST['comm1'];
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $down = $_POST['comm1'];
         $com = $_POST['down'];
-    $obj = new StrategyComment();
-    $obj -> ComentBlock($com);
     }
+    $obj = new StrategyComment($down);
+    $obj -> ComentBlock($com);
+
     ?>
 </body>
 </html>
