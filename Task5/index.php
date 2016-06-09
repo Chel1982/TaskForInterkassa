@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stategy</title>
+    <title>Strategy</title>
 </head>
 <body>
     <form name="up" method="post" action="">
@@ -13,9 +13,9 @@
     </form>
     <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $com = $_POST['comm'];
-        $obj = new StrategyComment($com);
-        //$obj->ComentBlock();
+        $up = $_POST['up'];
+        $obj = new StrategyComment($up);
+        $obj->ComentBlock($com);
     }
      ?>
     <div>
@@ -35,8 +35,8 @@
     <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $com = $_POST['comm1'];
-    $obj = new StrategyComment($com);
-    $obj -> ComentBlock();
+    $obj = new StrategyComment();
+    $obj -> ComentBlock($com);
     }
     ?>
 </body>

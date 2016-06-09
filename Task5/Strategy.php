@@ -25,9 +25,9 @@ class StrategyComment
     protected $com;
     public function __construct($com)
     {
-        if($com == "comm"){
+        if($com == "up"){
             $this -> comm = new CommentUp();
-        }elseif($com == "comm1"){
+        }elseif($com == "down"){
             $this -> comm = new CommentDown();
         }
     }
