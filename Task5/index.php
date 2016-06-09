@@ -14,6 +14,7 @@
     <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $up = $_POST['up'];
+        $com = $_POST['comm'];
         $obj = new StrategyComment($up);
         $obj->ComentBlock($com);
     }
@@ -34,7 +35,8 @@
     </form>
     <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $com = $_POST['comm1'];
+        $up = $_POST['comm1'];
+        $com = $_POST['down'];
     $obj = new StrategyComment();
     $obj -> ComentBlock($com);
     }
